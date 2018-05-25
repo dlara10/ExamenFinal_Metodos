@@ -36,7 +36,11 @@ def fourier():
         for j in range(n):
             yf += y[i] * np.exp(-1j * 2*num.pi* i*j/N)
         yfourier.append(yf / n)
+        if(yfourier[i] == 10000):
+            yfourier[i] == 0
+            
     return yfourier
+
     
 
 
