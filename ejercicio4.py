@@ -12,6 +12,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 
+
 n = 512 # number of point in the whole interval
 f = 200.0 #  frequency in Hz
 dt = 1 / (f * 128 ) #128 samples per frequency
@@ -28,7 +29,15 @@ plt.savefig("senal.png")
 plt.show()
 
 #Transformada de fourier
-
+yfourier=[]
+def fourier():
+    for i in range(n):
+        yf = 0.0
+        for j in range(n):
+            yf += y[i] * np.exp(-1j * 2*num.pi* i*j/N)
+        yfourier.append(yf / n)
+    return yfourier
+    
 
 
 
