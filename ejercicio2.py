@@ -4,7 +4,13 @@
 import numpy as np
 
 x = np.int_(np.random.random(100)*1000)
-print(x)
+dx = len(x)
+for i in range(dx):
+  while x[i] < 800:
+    if (x[i]%2 == 1):
+      print(x[i])
+
+
 
 
 
